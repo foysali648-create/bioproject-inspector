@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bioproject-inspector"
+version = "0.1.0"
+description = "Inspect an ENA/SRA BioProject from metadata only: data type, sanity checks, QC checklist and a disk-aware download script."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["requests"]
+
+[project.scripts]
+bioproject-inspector = "bioproject_inspector.cli:main"
+
+[tool.setuptools]
+packages = ["bioproject_inspector"]
