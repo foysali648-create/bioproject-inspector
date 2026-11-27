@@ -20,7 +20,7 @@ The report step downloads nothing and needs almost no disk space.
 
 For the web interface also install FastAPI and Uvicorn:
 
-    pip install fastapi uvicorn
+    pip install -e ".[web]"
 
 ## Use
 
@@ -70,7 +70,7 @@ have. To resume a partly finished download on a nearly full disk:
 
 ## Tests
 
-    pip install pytest httpx fastapi
+    pip install -e ".[dev]"
     python -m pytest -q
 
 ## License

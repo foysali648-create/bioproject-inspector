@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,7 +8,19 @@ version = "0.1.0"
 description = "Inspect an ENA/SRA BioProject from metadata only: data type, sanity checks, QC checklist and a disk-aware download script."
 readme = "README.md"
 requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Abdullah Foysal" }]
+keywords = ["bioinformatics", "SRA", "ENA", "BioProject", "metagenomics", "16S"]
 dependencies = ["requests"]
+
+[project.optional-dependencies]
+web = ["fastapi", "uvicorn"]
+dev = ["pytest", "httpx", "fastapi"]
+
+[project.urls]
+Homepage = "https://github.com/foysali648-create/bioproject-inspector"
+Issues = "https://github.com/foysali648-create/bioproject-inspector/issues"
 
 [project.scripts]
 bioproject-inspector = "bioproject_inspector.cli:main"
