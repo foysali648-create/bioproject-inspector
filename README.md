@@ -1,5 +1,7 @@
 # bioproject-inspector
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24611635.svg)](https://doi.org/10.5281/zenodo.24611635)
+
 Unofficial community tool. Not affiliated with NCBI or EMBL-EBI.
 
 Give it a BioProject accession (for example PRJNA633959) and it reads run
@@ -76,3 +78,9 @@ have. To resume a partly finished download on a nearly full disk:
 ## License
 
 MIT
+
+## Citation
+
+If you use this tool, please cite it via the DOI above
+(https://doi.org/10.5281/zenodo.24611635) or use the "Cite this repository"
+button on GitHub (see CITATION.cff).

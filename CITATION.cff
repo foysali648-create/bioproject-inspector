@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "bioproject-inspector"
+type: software
+authors:
+  - family-names: Foysal
+    given-names: Abdullah
+version: 0.1.0
+doi: 10.5281/zenodo.24611635
+date-released: 2026-11-28
+license: MIT
+repository-code: "https://github.com/foysali648-create/bioproject-inspector"
+abstract: "Inspect an ENA/SRA BioProject from metadata only: data type, sanity checks, QC checklist and a disk-aware download script."
+keywords:
+  - bioinformatics
+  - SRA
+  - ENA
+  - metagenomics
