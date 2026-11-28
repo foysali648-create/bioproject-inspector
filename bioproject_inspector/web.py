@@ -47,6 +47,18 @@ ul { padding-left: 1.2em; } li { margin: 4px 0; }
 .info { background:var(--infobg); color:var(--info); }
 .error { color:var(--err); font-weight:600; }
 .hint { color:var(--muted); }
+.brand{display:flex;align-items:center;gap:10px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0 0;padding:0;list-style:none}
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:.9rem}
+.examples{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.examples a{flex:1;min-width:220px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--fg);text-decoration:none}
+.examples a:hover{border-color:var(--accent)}
+.examples small{display:block;color:var(--muted)}
+.sec{font-size:1.1rem;margin:32px 0 0}
+footer{margin-top:36px;color:var(--muted);font-size:.85rem}
+footer a{color:var(--accent)}
 </style>
 <script>
 (function () {
@@ -66,7 +78,7 @@ function toggleTheme() {
 <body>
 <main>
 <header>
-  <h1>BioProject Inspector</h1>
+  <div class="brand"><svg width="34" height="34" viewBox="0 0 32 32" fill="none" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 3c0 8 14 8 14 13s-14 5-14 13" stroke="var(--accent)"/><path d="M23 3c0 8-14 8-14 13s14 5 14 13" stroke="var(--muted)"/><path d="M11 8h10M11 24h10M9.5 16h13" stroke="var(--line)"/></svg><h1>BioProject Inspector</h1></div>
   <button class="toggle" onclick="toggleTheme()" type="button">Light / Dark</button>
 </header>
 <form action="/report" method="get">
@@ -75,6 +87,23 @@ function toggleTheme() {
   <input type="submit" value="Inspect">
 </form>
 __BODY__
+<h2 class="sec">How it works</h2>
+<ul class="steps">
+  <li><b>&#128269; 1. Accession</b><span>Enter a BioProject ID such as PRJNA633959.</span></li>
+  <li><b>&#128225; 2. ENA metadata</b><span>Run details are read from ENA. Nothing is downloaded.</span></li>
+  <li><b>&#9989; 3. Checks</b><span>Data type, warnings and a QC checklist.</span></li>
+  <li><b>&#128229; 4. Script</b><span>Use the CLI to get a disk-aware download script.</span></li>
+</ul>
+<h2 class="sec">Try an example</h2>
+<div class="examples">
+  <a href="/report?accession=PRJNA633959"><b>PRJNA633959</b><small>Amplicon (16S) example</small></a>
+  <a href="/report?accession=PRJNA679346"><b>PRJNA679346</b><small>Shotgun metagenome example</small></a>
+</div>
+<footer>
+  Unofficial community tool, not affiliated with NCBI or EMBL-EBI.
+  <a href="https://github.com/foysali648-create/bioproject-inspector">GitHub</a> &middot;
+  <a href="https://doi.org/10.5281/zenodo.24611635">DOI</a> &middot; MIT license
+</footer>
 </main>
 </body>
 </html>
