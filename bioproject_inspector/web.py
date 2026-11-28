@@ -78,6 +78,7 @@ footer a{color:var(--accent)}
 @keyframes blink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
 @keyframes pop{0%{opacity:0;transform:scale(.6)}100%{opacity:1;transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){#intro *{animation:none!important}}
+.sig{margin-top:8px;font-size:1.05rem;font-style:italic;opacity:.9;font-family:"Brush Script MT","Segoe Script",cursive}
 </style>
 <script>
 (function () {
@@ -124,6 +125,7 @@ __BODY__
   Unofficial community tool, not affiliated with NCBI or EMBL-EBI.
   <a href="https://github.com/foysali648-create/bioproject-inspector">GitHub</a> &middot;
   <a href="https://doi.org/10.5281/zenodo.24611635">DOI</a> &middot; MIT license
+  <div class="sig">Foysal &amp; Mumu</div>
 </footer>
 </main>
 </body>
