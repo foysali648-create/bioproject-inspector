@@ -78,7 +78,7 @@ footer a{color:var(--accent)}
 @keyframes blink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
 @keyframes pop{0%{opacity:0;transform:scale(.6)}100%{opacity:1;transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){#intro *{animation:none!important}}
-.sig{margin-top:8px;font-size:1.05rem;font-style:italic;opacity:.9;font-family:"Brush Script MT","Segoe Script",cursive}
+.sig{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:1.8rem;font-weight:700;font-style:italic;letter-spacing:.5px;color:var(--fg);opacity:1;font-family:"Segoe Script","Lucida Handwriting","Brush Script MT",cursive}
 </style>
 <script>
 (function () {
