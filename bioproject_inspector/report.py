@@ -4,6 +4,7 @@ from collections import Counter
 from bioproject_inspector.ena import fetch_runs
 from bioproject_inspector.analyze import classify, check
 from bioproject_inspector.hints import checklist
+from bioproject_inspector.ncbi import fetch_bioproject
 
 
 def build_report(accession):
@@ -15,6 +16,19 @@ def build_report(accession):
     titles = sorted({r.study_title for r in runs if r.study_title})
     if titles:
         out.append("Title: %s" % titles[0])
+    info = fetch_bioproject(acc)
+    if info:
+        if info["title"]:
+            out.append("NCBI title: %s" % info["title"])
+        if info["data_type"]:
+            out.append("NCBI data type: %s" % info["data_type"])
+        if info["organization"]:
+            out.append("Submitter organization: %s" % info["organization"])
+        if info["registered"]:
+            out.append("Registered at NCBI: %s" % info["registered"])
+        if info["description"]:
+            d = info["description"]
+            out.append("NCBI description: %s" % (d[:400] + ("..." if len(d) > 400 else "")))
     out.append("")
     out.append("Type: %s" % classify(runs))
     out.append("Runs: %d | Sample accessions in ENA: %d | FASTQ size: %.1f GB"
