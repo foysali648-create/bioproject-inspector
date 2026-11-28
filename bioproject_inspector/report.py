@@ -18,7 +18,7 @@ def build_report(accession):
         out.append("Title: %s" % titles[0])
     info = fetch_bioproject(acc)
     if info:
-        if info["title"]:
+        if info["title"] and info["title"] not in titles:
             out.append("NCBI title: %s" % info["title"])
         if info["data_type"]:
             out.append("NCBI data type: %s" % info["data_type"])

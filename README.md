@@ -5,7 +5,8 @@
 Unofficial community tool. Not affiliated with NCBI or EMBL-EBI.
 
 Give it a BioProject accession (for example PRJNA633959) and it reads run
-metadata from the ENA Portal API and tells you, before you download anything:
+metadata from the ENA Portal API (plus the project title and description from
+NCBI) and tells you, before you download anything:
 
 - what kind of data it is (amplicon, shotgun metagenome, and so on)
 - sanity warnings: mixed layouts or platforms, missing FASTQ files, low read
